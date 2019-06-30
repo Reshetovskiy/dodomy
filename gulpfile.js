@@ -38,7 +38,12 @@ var gulp          = require('gulp'),
 
 var versionScripts = new Date();
 
-versionScripts = parseInt(versionScripts.getFullYear() + '' + versionScripts.getMonth() + '' + versionScripts.getDay() + '' + versionScripts.getHours());
+versionScripts = parseInt(
+    versionScripts.getFullYear() + ''
+    + versionScripts.getMonth() + ''
+    + versionScripts.getDay() + ''
+    + versionScripts.getHours() + ''
+    + versionScripts.setSeconds());
 
 runSequence.options.ignoreUndefinedTasks = true;
 

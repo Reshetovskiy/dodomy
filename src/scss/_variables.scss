@@ -1,7 +1,7 @@
 // @~ Media
 
-$sr-min-540: "screen and (min-width: 540px)";
-$sr-min-768: "screen and (min-width: 768px)";
+$sr-320: "screen and (max-width: 567px)";
+$sr-1300: "screen and (min-width: 1300px)";
 
 // @~ Colors
 
@@ -12,56 +12,76 @@ $grey: #eee;
 
 $font: "", sans-serif, arial;
 
+// @~ z-indexes: Example: z-index: z('moda');
+
+$z-indexes: (
+    'modal': 5000,
+    'dwopdown': 2000,
+    'default': 1,
+    'below': -1
+);
+
+@function z($layer) {
+    @return map-get($z-indexes, $layer);
+}
+
 // @~ Mixins
 
+/* 
+    Достатньо, на початку сторінки вписати список контейнерів, наприклад
+    
+    .cart__container,
+    .category__container {
+        @include @container;
+    }
+
+    і в подальших медіа запитах цього не потрібно буде робити
+*/
+
 @mixin container() {
-    max-width: 320px;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    @media #{$sr-320} {
+        max-width: 320px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media #{$sr-1300} {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
-@mixin container_1300() {
-    max-width: 1260px;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-}
+// ~ Example: @include images('url', cover, center, no-repeat);
 
-// ~ Example: @include _images('url', cover, center, no-repeat);
-
-@mixin _images($url, $size: cover, $position: center, $repeat: no-repeat) {
+@mixin images($url, $size: cover, $position: center, $repeat: no-repeat) {
     background-image: url($url);
     background-repeat: $repeat;
     background-size: $size;
     background-position: $position;
 }
 
-@mixin _flex_start() {
+@mixin flex_start() {
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
 }
 
-@mixin _flex_center() {
+@mixin flex_center() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin _object() {
+@mixin object() {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
 }
 
-@mixin _elements() {
-    content: '';
-    display: block;
-}
-
-@mixin _absolute() {
+@mixin absolute() {
     position: absolute;
     top: 0;
     left: 0;
