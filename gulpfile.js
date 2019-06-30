@@ -35,7 +35,8 @@ var gulp          = require('gulp'),
     sourcemaps    = require('gulp-sourcemaps'),
     env           = require('gulp-env'),
     gulpif        = require('gulp-if'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    htmlbeautify = require('gulp-beautify');
 
 var versionScripts = new Date();
 
@@ -156,6 +157,7 @@ gulp.task('html:build', function () {
         .pipe(fileInclude())
         .pipe(gulpif(arg.retina, imgRetina(retinaOpts)))
         .pipe(replace("$$version$$", "?v=" + versionScripts))
+        .pipe(htmlbeautify.html({ indent_size: 4 }))
         .pipe(gulp.dest(path.build.html))
         .pipe(connect.reload());
 });
