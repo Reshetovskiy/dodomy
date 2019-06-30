@@ -34,7 +34,8 @@ var gulp          = require('gulp'),
     runSequence   = require('run-sequence'),
     sourcemaps    = require('gulp-sourcemaps'),
     env           = require('gulp-env'),
-    gulpif        = require('gulp-if');
+    gulpif        = require('gulp-if'),
+    babel = require('gulp-babel');
 
 var versionScripts = new Date();
 
@@ -162,6 +163,9 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     return gulp.src(path.src.js)
         .pipe(rigger())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(gulp.dest(path.build.js))
         .pipe(connect.reload());
 });
