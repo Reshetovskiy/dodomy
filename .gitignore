@@ -6,3 +6,4 @@ build/
 test/
 app/
 .env.json
+package-lock.json
