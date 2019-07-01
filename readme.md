@@ -1,9 +1,11 @@
 # gulp "Start project"
 Сборка gulp
 
-## Установка
+## Установка пакетов
 
-npm i
+npm i gulp@3.9.1 gulp-uglify-es gulp-rename gulp-file-include gulp-env fancy-log gulp-util vinyl-ftp gulp-sourcemaps run-sequence gulp-zip gulp-useref gulp-htmlmin gulp-csso gulp-img-retina gulp-if gulp-inline-source gulp-autoprefixer gulp-bower gulp-connect gulp-cssmin gulp-filter gulp-imagemin gulp-sass gulp-livereload gulp-include gulp-uglify gulp.spritesmith gulp-svg-sprite gulp-svgmin gulp-cheerio gulp-replace gulp-plumber imagemin-pngquant opn rimraf @babel/core @babel/preset-env gulp-babel gulp-beautify -g
+
+npm link gulp@3.9.1 gulp-uglify-es gulp-rename gulp-file-include gulp-env fancy-log gulp-util vinyl-ftp gulp-sourcemaps run-sequence gulp-zip gulp-useref gulp-htmlmin gulp-csso gulp-img-retina gulp-if gulp-inline-source gulp-autoprefixer gulp-bower gulp-connect gulp-cssmin gulp-filter gulp-imagemin gulp-sass gulp-livereload gulp-include gulp-uglify gulp.spritesmith gulp-svg-sprite gulp-svgmin gulp-cheerio gulp-replace gulp-plumber imagemin-pngquant opn rimraf @babel/core @babel/preset-env gulp-babel gulp-beautify
 
 ```
 

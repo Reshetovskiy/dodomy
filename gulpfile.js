@@ -36,7 +36,7 @@ var gulp          = require('gulp'),
     env           = require('gulp-env'),
     gulpif        = require('gulp-if'),
     babel = require('gulp-babel'),
-    htmlbeautify = require('gulp-beautify');
+    beautify = require('gulp-beautify');
 
 var versionScripts = new Date();
 
@@ -157,7 +157,7 @@ gulp.task('html:build', function () {
         .pipe(fileInclude())
         .pipe(gulpif(arg.retina, imgRetina(retinaOpts)))
         .pipe(replace("$$version$$", "?v=" + versionScripts))
-        .pipe(htmlbeautify.html({ indent_size: 4 }))
+        .pipe(beautify.html({ indent_size: 2 }))
         .pipe(gulp.dest(path.build.html))
         .pipe(connect.reload());
 });
@@ -168,6 +168,7 @@ gulp.task('js:build', function () {
         .pipe(babel({
             presets: ['@babel/env']
         }))
+        .pipe(beautify({ indent_size: 2 }))
         .pipe(gulp.dest(path.build.js))
         .pipe(connect.reload());
 });
@@ -177,6 +178,7 @@ gulp.task('style:build', function () {
         .pipe(plumber())
         .pipe(sass())
         .pipe(prefixer())
+        .pipe(beautify.css({ indent_size: 2 }))
         .pipe(gulp.dest(path.build.css))
         .pipe(connect.reload());
 });
