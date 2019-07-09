@@ -25,6 +25,10 @@ input, textarea {
     box-shadow: none;
 }
 
+textarea {
+    resize: none;
+}
+
 button {
     padding: 0;
     cursor: pointer;
