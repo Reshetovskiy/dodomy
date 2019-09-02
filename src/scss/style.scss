@@ -3,12 +3,16 @@
 @import "_default";
 @import "_fonts";
 
+@import "libs/libs.scss";
+
 @import "partials/icons";
 @import "partials/svg_sprite";
 
-@import "templates/_layouts/_header";
-@import "templates/_layouts/_footer";
+@import "templates/_blocks/blocks";
+ 
 
 @import "components/style";
 
-@import "templates/@home/style";
+@import "templates/pages/style";
+
+ 

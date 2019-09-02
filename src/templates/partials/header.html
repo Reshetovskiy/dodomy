@@ -1,15 +1,214 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-cache">
     <title>~ Developer_dream</title>
-    <link rel="stylesheet" href="css/style.css$$version$$" inline>
+    <link rel="stylesheet" href="css/style.css" inline>
 </head>
-<body>
 
-<header class="header">
-   
-</header>
+<body>
+    <header class="header">
+        <!--=include slider.html -->
+        <div class="header__wrapper">
+            <div class="header__container">
+                <div class="header__header-navigation header-navigation">
+                    <button class="burger">
+                        <span class="burger__line"></span>
+                    </button>
+                    <picture class="header-navigation__brand brand">
+                        <source srcset="img/logo-mobile.png" media="(max-width: 749px )">
+                        <source srcset="img/logo-tablet.png" media="(max-width: 1169px)">
+                        <source srcset="img/logo-desktop.png" media="(min-width: 1170px)">
+                        <img src="img/logo-desktop.png" alt="">
+                    </picture>
+                    <div class="header-navigation__container container-navigation">
+                        <div class="navigation-top">
+                            <ul class="navigation-top__contacts-line contacts-line">
+                                <li class="contacts-line__item">(099) 700 70 70</li>
+                                <li class="contacts-line__item contacts-line__user"> 
+                                    <a href="#" class="contacts-line__link contacts-line__link--yellow">Вхід @@include('mixins/svg-icon.html', {"name": "sign-in", "class": "contacts-line__icon"})</a>
+                                </li>
+                                <li class="contacts-line__item contacts-line__user"> 
+                                    <a href="#" class="contacts-line__link contacts-line__link--yellow">Реєстрація @@include('mixins/svg-icon.html', {"name": "register", "class": "contacts-line__icon"})</a></li>
+                                <li class="contacts-line__item">(063) 800 80 80</li>
+                                <li class="contacts-line__item">(098) 300 30 30</li>
+                            </ul>
+                            <div class="navigation-top__location location">
+                                <div class="location__search search">
+                                    <div class="search__field">
+                                        <span class="search__label">пошук</span>
+                                        <input type="text" class="search__input">
+                                    </div>
+                                    <span class="search__icon-block">
+                                        @@include('mixins/svg-icon.html', {"name": "search", "class": "search__icon-search"})
+                                    </span>
+                                </div>
+                                <div class="location__language language">
+                                    <span class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</span>
+                                    <ul class="language__change change-language">
+                                        <li class="change-language__item">ua</li>
+                                        <li class="change-language__item">ru</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="navigation-bottom">
+                            <ul class="site-menu">
+                                <li class="site-menu__item"><a href="#" class="site-menu__link">Про нас</a></li>
+                                <li class="site-menu__item"><a href="#" class="site-menu__link">Доставка</a></li>
+                                <li class="site-menu__item"><a href="#" class="site-menu__link">Контакти</a></li>
+                            </ul>
+                            <div class="navigation-bottom__location location">
+                                <div class="location__search search">
+                                    <div class="search__field">
+                                        <span class="search__label">пошук</span>
+                                        <input type="text" class="search__input">
+                                    </div>
+                                    <span class="search__icon-block">
+                                        @@include('mixins/svg-icon.html', {"name": "search", "class": "search__icon-search"})
+                                    </span>
+                                </div>
+                                <div class="location__language language">
+                                    <span class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</span>
+                                    <ul class="language__change change-language">
+                                        <li class="change-language__item">ua</li>
+                                        <li class="change-language__item">ru</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <a class="basket">
+                        <span class="basket__circle">
+                            @@include('mixins/svg-icon.html', {"name": "basket", "class": "basket__icon"})
+                        </span>
+                        <span class="basket__current">0</span>
+                    </a>
+                </div>
+                <ul class="catalog header__catalog">
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "hallway", "class": "catalog__icon"}) Коридор </a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "bedroom", "class": "catalog__icon"}) Спальня</a></li>
+                    <li class="catalog__item">
+                        <a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "kitchen", "class": "catalog__icon"}) Кухня</a>
+                        <div class="catalog__dropdown dropdown-catalog">
+                            <div class="mob-control">
+                                <button class="mob-control__back">
+                                    @@include('mixins/svg-icon.html', {"name": "arrow-down", "class": "mob-control__arrow"}) Назад
+                                </button>
+                                <span class="mob-control__current">
+                                    @@include('mixins/svg-icon.html', {"name": "kitchen", "class": "mob-control__kithen"})
+                                    Кухня
+                                </span>
+                            </div>
+                            <div class="dropdown-content">
+                                <div class="dropdown-item dropdown-content__item">
+                                    <div class="head-dropdown">
+                                        <picture class="head-dropdown__frame">
+                                            <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
+                                            <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
+                                        </picture>
+                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item dropdown-content__item">
+                                    <div class="head-dropdown">
+                                        <picture class="head-dropdown__frame">
+                                            <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
+                                            <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
+                                        </picture>
+                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item dropdown-content__item">
+                                    <div class="head-dropdown">
+                                        <picture class="head-dropdown__frame">
+                                            <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
+                                            <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
+                                        </picture>
+                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item dropdown-content__item">
+                                    <div class="head-dropdown">
+                                        <picture class="head-dropdown__frame">
+                                            <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
+                                            <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
+                                        </picture>
+                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item dropdown-content__item dropdown-content__item--content">
+                                    <div class="head-dropdown">
+                                        <picture class="head-dropdown__frame">
+                                            <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
+                                            <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
+                                        </picture>
+                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                    </div>
+                                    <ul class="category-dropdown">
+                                        <li class="categories-dropdown__item">
+                                            <a href="#" class="categories-dropdown__link"> @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "categories-dropdown__icon"}) Стільниці кухонні під будь-який розмір</a>
+                                        </li>
+                                        <li class="categories-dropdown__item">
+                                            <a href="#" class="categories-dropdown__link"> @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "categories-dropdown__icon"}) Стільниці кухонні під будь-який розмір</a>
+                                        </li>
+                                        <li class="categories-dropdown__item">
+                                            <a href="#" class="categories-dropdown__link"> @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "categories-dropdown__icon"}) Стільниці кухонні під будь-який розмір</a>
+                                        </li>
+                                        <li class="categories-dropdown__item">
+                                            <a href="#" class="categories-dropdown__link"> @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "categories-dropdown__icon"}) Стільниці кухонні під будь-який розмір</a>
+                                        </li>
+                                        <div class="category-dropdown__shadow"> 
+                                           <img src="img/arrow_down.png" alt="" class="category-dropdown__arrow">
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="more-content">
+                                <figure class="more-content__frame">
+                                    <img src="img/more-arow.png" alt="" class="more-content__img">
+                                </figure>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "living", "class": "catalog__icon"}) Вітальня</a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "sofa", "class": "catalog__icon"}) Дивани</a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "commode", "class": "catalog__icon"}) Комоди</a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "office", "class": "catalog__icon"}) Офіс</a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "wardrobe", "class": "catalog__icon"}) Шафи</a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "pouf", "class": "catalog__icon"}) v</a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "tables", "class": "catalog__icon"}) Столи, <br> стільці</a></li>
+                    <li class="catalog__item"><a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "lamp", "class": "catalog__icon"}) Люстри</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-menu">
+            <button class="modal-menu__close"></button>
+            <a class="modal-menu__basket basket">
+                <span class="basket__circle">
+                    @@include('mixins/svg-icon.html', {"name": "basket", "class": "basket__icon"})
+                </span>
+                <span class="basket__current">0</span>
+            </a>
+            <ul class="site-menu">
+                <li class="site-menu__item site-menu__user"><a href="#" class="site-menu__link site-menu__link--yellow">Вхід @@include('mixins/svg-icon.html', {"name": "sign-in", "class": "site-menu__icon"})</a></li>
+                <li class="site-menu__item site-menu__user"><a href="#" class="site-menu__link site-menu__link--yellow">Реєстрація @@include('mixins/svg-icon.html', {"name": "register", "class": "site-menu__icon"})</a></li>
+                <li class="site-menu__item"><a href="#" class="site-menu__link">Про нас</a></li>
+                <li class="site-menu__item"><a href="#" class="site-menu__link">Доставка</a></li>
+                <li class="site-menu__item"><a href="#" class="site-menu__link">Контакти</a></li>
+            </ul>
+            <div class="modal-menu__search search">
+                <div class="search__field">
+                    <span class="search__label">пошук</span>
+                    <input type="text" class="search__input">
+                </div>
+                <span class="search__icon-block">
+                    @@include('mixins/svg-icon.html', {"name": "search", "class": "search__icon-search"})
+                </span>
+            </div>
+        </div>
+    </header>

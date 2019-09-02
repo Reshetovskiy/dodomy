@@ -16,3 +16,26 @@
 // extra-bold 800 Italic
 // black 900
 // black 900 Italic
+
+ 
+@font-face {
+	font-family: 'Proxima';
+	src: url('../fonts/ProximaNova/ProximaNova-Regular.eot');
+	src: local('../fonts/ProximaNova/Proxima Nova Regular'), local('ProximaNova-Regular'),
+		url('../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museu';
+	src: url('../fonts/museo/ProximaNova-Regular.eot');
+	src: local('../fonts/ProximaNova/Proxima Nova Regular'), local('ProximaNova-Regular'),
+		url('../fonts/museo/Museocyrl500.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/museo/Museocyrl500.woff') format('woff'),
+		url('../fonts/museo/Museocyrl500.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

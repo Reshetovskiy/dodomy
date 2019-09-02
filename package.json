@@ -44,9 +44,11 @@
     "gulp-zip": "*",
     "gulp.spritesmith": "*",
     "imagemin-pngquant": "*",
+    "jquery": "^3.4.1",
     "opn": "*",
     "rimraf": "*",
     "run-sequence": "*",
+    "swiper": "^4.5.0",
     "vinyl-ftp": "*"
   },
   "dependencies": {

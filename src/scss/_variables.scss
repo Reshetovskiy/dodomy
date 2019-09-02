@@ -1,7 +1,8 @@
 // @~ Media
 
-$sr-320: "screen and (max-width: 567px)";
-$sr-1300: "screen and (min-width: 1300px)";
+$sr-320: "screen and (min-width: 320px)";
+$sr-750: "screen and (min-width: 750px)";
+$sr-1300: "screen and (min-width: 1170px)";
 
 // @~ Colors
 
@@ -10,7 +11,7 @@ $grey: #eee;
 
 // @~ Fonts
 
-$font: "", sans-serif, arial;
+$font: "Museu", sans-serif, arial;
 
 // @~ z-indexes: Example: z-index: z('moda');
 
@@ -20,6 +21,8 @@ $z-indexes: (
     'default': 1,
     'below': -1
 );
+
+$height:  330px;
 
 @function z($layer) {
     @return map-get($z-indexes, $layer);
