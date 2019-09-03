@@ -19,7 +19,7 @@
                     <button class="burger">
                         <span class="burger__line"></span>
                     </button>
-                    <picture class="header-navigation__brand brand">
+                    <picture class="header-navigation__brand">
                         <source srcset="img/logo-mobile.png" media="(max-width: 749px )">
                         <source srcset="img/logo-tablet.png" media="(max-width: 1169px)">
                         <source srcset="img/logo-desktop.png" media="(min-width: 1170px)">
@@ -28,14 +28,21 @@
                     <div class="header-navigation__container container-navigation">
                         <div class="navigation-top">
                             <ul class="navigation-top__contacts-line contacts-line">
-                                <li class="contacts-line__item"> <a href="#" class="contacts-line__link" >(099) 700 70 70</a> </li>
+                                <li class="contacts-line__item"> 
+                                    <a href="tel:(099) 700 70 70" class="contacts-line__link" >(099) 700 70 70</a> 
+                                </li>
                                 <li class="contacts-line__item contacts-line__user"> 
                                     <a href="#" class="contacts-line__link contacts-line__link--yellow">Вхід @@include('mixins/svg-icon.html', {"name": "sign-in", "class": "contacts-line__icon"})</a>
                                 </li>
                                 <li class="contacts-line__item contacts-line__user"> 
-                                    <a href="#" class="contacts-line__link contacts-line__link--yellow">Реєстрація @@include('mixins/svg-icon.html', {"name": "register", "class": "contacts-line__icon"})</a></li>
-                                <li class="contacts-line__item"> <a href="#" class="contacts-line__link" >(063) 800 80 80</a> </li>
-                                <li class="contacts-line__item"> <a href="#" class="contacts-line__link" >(098) 300 30 30</a> </li>
+                                    <a href="#" class="contacts-line__link contacts-line__link--yellow">Реєстрація @@include('mixins/svg-icon.html', {"name": "register", "class": "contacts-line__icon"})</a>
+                                </li>
+                                <li class="contacts-line__item"> 
+                                    <a href="tel:(063) 800 80 80" class="contacts-line__link" >(063) 800 80 80</a> 
+                                </li>
+                                <li class="contacts-line__item"> 
+                                    <a href="tel:(098) 300 30 30" class="contacts-line__link" >(098) 300 30 30</a> 
+                                </li>
                             </ul>
                             <div class="navigation-top__location location">
                                 <div class="location__search search">
