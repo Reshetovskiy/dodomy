@@ -28,14 +28,14 @@
                     <div class="header-navigation__container container-navigation">
                         <div class="navigation-top">
                             <ul class="navigation-top__contacts-line contacts-line">
-                                <li class="contacts-line__item">(099) 700 70 70</li>
+                                <li class="contacts-line__item"> <a href="#" class="contacts-line__link" >(099) 700 70 70</a> </li>
                                 <li class="contacts-line__item contacts-line__user"> 
                                     <a href="#" class="contacts-line__link contacts-line__link--yellow">Вхід @@include('mixins/svg-icon.html', {"name": "sign-in", "class": "contacts-line__icon"})</a>
                                 </li>
                                 <li class="contacts-line__item contacts-line__user"> 
                                     <a href="#" class="contacts-line__link contacts-line__link--yellow">Реєстрація @@include('mixins/svg-icon.html', {"name": "register", "class": "contacts-line__icon"})</a></li>
-                                <li class="contacts-line__item">(063) 800 80 80</li>
-                                <li class="contacts-line__item">(098) 300 30 30</li>
+                                <li class="contacts-line__item"> <a href="#" class="contacts-line__link" >(063) 800 80 80</a> </li>
+                                <li class="contacts-line__item"> <a href="#" class="contacts-line__link" >(098) 300 30 30</a> </li>
                             </ul>
                             <div class="navigation-top__location location">
                                 <div class="location__search search">
@@ -50,8 +50,8 @@
                                 <div class="location__language language">
                                     <span class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</span>
                                     <ul class="language__change change-language">
-                                        <li class="change-language__item">ua</li>
-                                        <li class="change-language__item">ru</li>
+                                        <a class="change-language__item">ua</a>
+                                        <a class="change-language__item">ru</a>
                                     </ul>
                                 </div>
                             </div>
@@ -68,15 +68,15 @@
                                         <span class="search__label">пошук</span>
                                         <input type="text" class="search__input">
                                     </div>
-                                    <span class="search__icon-block">
+                                    <button class="search__icon-block">
                                         @@include('mixins/svg-icon.html', {"name": "search", "class": "search__icon-search"})
-                                    </span>
+                                    </button>
                                 </div>
                                 <div class="location__language language">
-                                    <span class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</span>
+                                    <button class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</button>
                                     <ul class="language__change change-language">
-                                        <li class="change-language__item">ua</li>
-                                        <li class="change-language__item">ru</li>
+                                        <li class="change-language__item"> <a href="#" class="change-language__link">ua</a></li>
+                                        <li class="change-language__item"> <a href="#" class="change-language__link">ru</a></li>
                                     </ul>
                                 </div>
                             </div>

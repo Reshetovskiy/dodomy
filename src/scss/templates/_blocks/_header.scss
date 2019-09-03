@@ -4,7 +4,6 @@
         position: relative;
         &__wrapper {
             padding-right: 0px;
-            z-index: 4;
             position: absolute;
             top: 0;
             width: 100%;
@@ -20,9 +19,11 @@
         justify-content: space-between;
         &__container {
             padding-right: 10px;
+            z-index: 5;
         }
         &__brand {
             margin: 0 15px;
+            z-index: 5;
         }
     }
 
@@ -37,6 +38,7 @@
         outline: 0;
         padding: 26px 11px;
         background-color: #cf9893;
+        z-index: 5;
         &__line {
             display: block;
             position: relative;
@@ -70,6 +72,9 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+        &__link {
+            color: #898889;
         }
         &__user {
             display: none;
@@ -157,6 +162,7 @@
         &__toggle {
             display: flex;
             align-items: center;
+            color: #898889;
         }
         &__change {
             margin-top: 3px;
@@ -176,18 +182,25 @@
         z-index: 10;
         text-align: center;
         position: absolute;
+        cursor: pointer;
         &__item {
             border-bottom: 1px solid #898889;
             padding: 3px 0;
+            display: block;
             &:last-child {
                 border: 0;
             }
         }
+        &__link {
+            color: #898889;
+        }
     }
 
     .basket {
-         display: none;;
+        display: none;
         position: relative;
+        cursor: pointer;
+        z-index: 5;
         &__circle {
             display: block;
             position: relative;
@@ -303,8 +316,11 @@
         }
         &__icon-block {
             display: block;
- 
         }
+    }
+
+    .basket {
+        display: block;
     }
 } 
 
@@ -423,6 +439,7 @@
         &__toggle {
             display: flex;
             align-items: center;
+            background-color: transparent;
         }
         &__arrow {
             width: 21px;

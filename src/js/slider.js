@@ -7,9 +7,9 @@ function initSwiper() {
       speed: 600,
       effect: 'fade',
       parallax: true,
-      autoplay: {
-        delay: 3000,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      // },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
