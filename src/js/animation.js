@@ -23,7 +23,6 @@ if(screenWidth < 1200) {
         $('.dropdown-catalog').removeClass('dropdown-catalog--show');
     })
 
-
     $(document).click(function (e) {
         var item = $(".catalog__link");
         var container = $(".dropdown-catalog");
@@ -33,6 +32,7 @@ if(screenWidth < 1200) {
             container.removeClass('dropdown-catalog--show');
         };
     });
+
 } else  {
 
     $('.catalog__link').on('mouseover', function () {

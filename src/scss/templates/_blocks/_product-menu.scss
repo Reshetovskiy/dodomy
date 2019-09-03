@@ -343,7 +343,7 @@
         flex-wrap: wrap;
         transform: translate(0);
         left: 0;
-        z-index: -100;
+        z-index: -10;
         opacity: 0;
         transition-duration: .3s;
         &--show {
