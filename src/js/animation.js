@@ -1,21 +1,21 @@
+const item = $(".catalog__link");
 
-var content = $('.dropdown-content');
+let content = $('.dropdown-content');
 $('.more-content__img').on('click', function () {
-
     $(this).toggleClass('more-content__img--active');
     content.toggleClass('dropdown-content--show');
 })
 
-var categories = $('.category-dropdown__shadow');
+let categories = $('.category-dropdown__shadow');
 
 $('.category-dropdown').on('click', function () {
     $(this).toggleClass('category-dropdown--show');
 });
 
-var screenWidth = $(window).width(); 
+let screenWidth = $(window).width(); 
 
 if(screenWidth < 1200) {
-    $('.catalog__link').on('click', function () {
+    $(item).on('click', function () {
         $(this).next().toggleClass('dropdown-catalog--show');
     })
 
@@ -24,8 +24,7 @@ if(screenWidth < 1200) {
     })
 
     $(document).click(function (e) {
-        var item = $(".catalog__link");
-        var container = $(".dropdown-catalog");
+        let container = $(".dropdown-catalog");
 
         if (!container.is(e.target) && !item.is(e.target)
             && container.has(e.target).length === 0) {
@@ -33,24 +32,18 @@ if(screenWidth < 1200) {
         };
     });
 
-} else  {
+}  
+const searchButton = $('.search__icon-block'),
+      searchField = $('.search__field'),
+      searchBlock = $('.search');
 
-    $('.catalog__link').on('mouseover', function () {
-        console.log('dkfgv');
-        $(this).next().addClass('dropdown-catalog--show');
-    })
-    
-    $(document).mouseout(function (e) {
-       var item = $(".catalog__link");
-       var container = $(".dropdown-catalog");
-   
-       if (!container.is(e.target) && !item.is(e.target)
-           && container.has(e.target).length === 0) {
-           container.removeClass('dropdown-catalog--show');
-       };
-    })
+if (screenWidth  > 767 && screenWidth < 1200 && !searchField.is('.search__field--show')) {
+    console.log(searchButton);
+        searchButton.on('click', function() {
+            searchBlock.addClass('search--show');
+        });
 }
-
+ 
 // search animation
 
 let body, inputModal;
@@ -59,7 +52,6 @@ inputModal = document.querySelectorAll('.search__input');
 
 if (!!inputModal) {
     inputModal.forEach(function (el) {
-        console.log('fvm');
         el.addEventListener('focus', function () {
             this.parentNode.classList.add('search__field--focus');
         })

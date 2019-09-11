@@ -16,20 +16,22 @@
         <div class="header__wrapper">
             <div class="header__container">
                 <div class="header__header-navigation header-navigation">
-                    <button class="burger">
+                    <button type="button" class="burger">
                         <span class="burger__line"></span>
                     </button>
-                    <picture class="header-navigation__brand">
-                        <source srcset="img/logo-mobile.png" media="(max-width: 749px )">
-                        <source srcset="img/logo-tablet.png" media="(max-width: 1169px)">
-                        <source srcset="img/logo-desktop.png" media="(min-width: 1170px)">
-                        <img src="img/logo-desktop.png" alt="">
-                    </picture>
+                    <a href="#" class="header-navigation__logo">
+                        <picture class="header-navigation__brand">
+                            <source srcset="img/logo-mobile.png" media="(max-width: 749px )">
+                            <source srcset="img/logo-tablet.png" media="(max-width: 1169px)">
+                            <source srcset="img/logo-desktop.png" media="(min-width: 1170px)">
+                            <img src="img/logo-desktop.png" alt="">
+                        </picture>
+                    </a>
                     <div class="header-navigation__container container-navigation">
                         <div class="navigation-top">
                             <ul class="navigation-top__contacts-line contacts-line">
                                 <li class="contacts-line__item"> 
-                                    <a href="tel:(099) 700 70 70" class="contacts-line__link" >(099) 700 70 70</a> 
+                                    <a href="tel:+0997007070" class="contacts-line__link" >(099) 700 70 70</a> 
                                 </li>
                                 <li class="contacts-line__item contacts-line__user"> 
                                     <a href="#" class="contacts-line__link contacts-line__link--yellow">Вхід @@include('mixins/svg-icon.html', {"name": "sign-in", "class": "contacts-line__icon"})</a>
@@ -38,14 +40,14 @@
                                     <a href="#" class="contacts-line__link contacts-line__link--yellow">Реєстрація @@include('mixins/svg-icon.html', {"name": "register", "class": "contacts-line__icon"})</a>
                                 </li>
                                 <li class="contacts-line__item"> 
-                                    <a href="tel:(063) 800 80 80" class="contacts-line__link" >(063) 800 80 80</a> 
+                                    <a href="tel:+0638008080" class="contacts-line__link" >(063) 800 80 80</a> 
                                 </li>
                                 <li class="contacts-line__item"> 
-                                    <a href="tel:(098) 300 30 30" class="contacts-line__link" >(098) 300 30 30</a> 
+                                    <a href="tel:+0983003030" class="contacts-line__link" >(098) 300 30 30</a> 
                                 </li>
                             </ul>
                             <div class="navigation-top__location location">
-                                <div class="location__search search">
+                                <form class="location__search search">
                                     <div class="search__field">
                                         <span class="search__label">пошук</span>
                                         <input type="text" class="search__input">
@@ -53,7 +55,7 @@
                                     <span class="search__icon-block">
                                         @@include('mixins/svg-icon.html', {"name": "search", "class": "search__icon-search"})
                                     </span>
-                                </div>
+                                </form>
                                 <div class="location__language language">
                                     <span class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</span>
                                     <ul class="language__change change-language">
@@ -70,17 +72,17 @@
                                 <li class="site-menu__item"><a href="#" class="site-menu__link">Контакти</a></li>
                             </ul>
                             <div class="navigation-bottom__location location">
-                                <div class="location__search search">
+                                <form class="location__search search">
                                     <div class="search__field">
                                         <span class="search__label">пошук</span>
                                         <input type="text" class="search__input">
                                     </div>
-                                    <button class="search__icon-block">
+                                    <button type="submit" class="search__icon-block">
                                         @@include('mixins/svg-icon.html', {"name": "search", "class": "search__icon-search"})
                                     </button>
-                                </div>
+                                </form>
                                 <div class="location__language language">
-                                    <button class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</button>
+                                    <button type="button"class="language__toggle"> ua @@include('mixins/svg-icon.html', {"name": "arrow-slider", "class": "language__arrow"})</button>
                                     <ul class="language__change change-language">
                                         <li class="change-language__item"> <a href="#" class="change-language__link">ua</a></li>
                                         <li class="change-language__item"> <a href="#" class="change-language__link">ru</a></li>
@@ -103,9 +105,9 @@
                         <a href="#" class="catalog__link">@@include('mixins/svg-icon.html', {"name": "kitchen", "class": "catalog__icon"}) Кухня</a>
                         <div class="catalog__dropdown dropdown-catalog">
                             <div class="mob-control">
-                                <button class="mob-control__back">
+                                <a class="mob-control__back">
                                     @@include('mixins/svg-icon.html', {"name": "arrow-down", "class": "mob-control__arrow"}) Назад
-                                </button>
+                                </a>
                                 <span class="mob-control__current">
                                     @@include('mixins/svg-icon.html', {"name": "kitchen", "class": "mob-control__kithen"})
                                     Кухня
@@ -118,7 +120,7 @@
                                             <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
                                             <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
                                         </picture>
-                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                        <a class="head-dropdown__title">Модульні кухні</a>
                                     </div>
                                 </div>
                                 <div class="dropdown-item dropdown-content__item">
@@ -127,7 +129,7 @@
                                             <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
                                             <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
                                         </picture>
-                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                        <a class="head-dropdown__title">Модульні кухні</a>
                                     </div>
                                 </div>
                                 <div class="dropdown-item dropdown-content__item">
@@ -136,7 +138,7 @@
                                             <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
                                             <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
                                         </picture>
-                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                        <a class="head-dropdown__title">Модульні кухні</a>
                                     </div>
                                 </div>
                                 <div class="dropdown-item dropdown-content__item">
@@ -145,7 +147,7 @@
                                             <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
                                             <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
                                         </picture>
-                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                        <a class="head-dropdown__title">Модульні кухні</a>
                                     </div>
                                 </div>
                                 <div class="dropdown-item dropdown-content__item dropdown-content__item--content">
@@ -154,7 +156,7 @@
                                             <source srcset="img/product-item-tablet.jpg" media="(max-width: 1169px)">
                                             <img src="img/product-item.jpg" alt="" class="head-dropdown__img">
                                         </picture>
-                                        <h3 class="head-dropdown__title">Модульні кухні</h3>
+                                        <a class="head-dropdown__title">Модульні кухні</a>
                                     </div>
                                     <ul class="category-dropdown">
                                         <li class="categories-dropdown__item">
@@ -194,7 +196,7 @@
             </div>
         </div>
         <div class="modal-menu">
-            <button class="modal-menu__close"></button>
+            <button type="button" class="modal-menu__close"></button>
             <a class="modal-menu__basket basket">
                 <span class="basket__circle">
                     @@include('mixins/svg-icon.html', {"name": "basket", "class": "basket__icon"})
